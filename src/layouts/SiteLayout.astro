@@ -1,0 +1,16 @@
+---
+const { title = 'Westmans Serviceverkstad', description = 'Bilservice i Kramfors – Westmans Serviceverkstad' } = Astro.props;
+import "../styles/styles.css";
+---
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+</head>
+<body>
+  <slot />
+</body>
+</html>

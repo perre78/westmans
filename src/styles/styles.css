@@ -316,13 +316,14 @@ strong {
 }
 
 @media (max-width: 860px) {
-  .hero-grid,
-  .content-split,
-  .contact-box,
-  .grid-three,
-  .grid-two {
-    grid-template-columns: 1fr;
+  .hero-art-image {
+    max-width: 100%;
   }
+
+  .cta-row .btn {
+    width: 100%;
+  }
+}
 
   .hero {
     padding-top: 3rem;

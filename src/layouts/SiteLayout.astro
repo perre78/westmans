@@ -1,16 +1,40 @@
 ---
-const { title = 'Westmans Serviceverkstad', description = 'Bilservice i Kramfors – Westmans Serviceverkstad' } = Astro.props;
+const {
+  title = 'Westmans Serviceverkstad',
+  description = 'Bilservice i Kramfors – Westmans Serviceverkstad'
+} = Astro.props;
+
 import "../styles/styles.css";
 ---
+
 <!doctype html>
 <html lang="sv">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{title}</title>
-  <meta name="description" content={description} />
-</head>
-<body>
-  <slot />
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+
+  <body>
+    <!-- Sidans innehåll -->
+    <slot />
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-row">
+
+          <div class="footer-logos">
+            <img src="/img/fiat-logo.svg" alt="Fiat" />
+            <img src="/img/fiat-professional.png" alt="Fiat Professional" />
+            <img src="/img/mrf-logo.png" alt="Motorbranschens Riksförbund" />
+          </div>
+
+          <p>&copy; Westmans Serviceverkstad</p>
+
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

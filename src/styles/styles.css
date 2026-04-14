@@ -46,11 +46,11 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2rem, 4vw, 3.6rem);
+  font-size: clamp(2rem, 2vw, 3.6rem);
 }
 
 h2 {
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
 }
 
 h3 {
@@ -112,10 +112,10 @@ a:hover {
 
 .nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;   /* lägger dem ovanpå varandra */
+  align-items: center;      /* centrerar horisontellt */
+  gap: 0.6rem;
   padding: 1rem 0;
-  gap: 1rem;
 }
 
 .nav nav {
@@ -265,12 +265,17 @@ a:hover {
 }
 
 /* CARD */
+/* CARD */
 .card {
   background: var(--surface);
   border: 1px solid var(--line);
   padding: 1.2rem;
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
+}
+
+.note {
+  align-self: start;   /* ← DETTA ÄR DET SOM SAKNAS */
 }
 
 .note ul {
@@ -310,8 +315,9 @@ a:hover {
 .footer-row {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0.8rem;
+  align-items: center;
+  text-align: center;
+  gap: 1.0rem;   /* ← öka från t.ex. 0.8rem */
 }
 
 .footer-logos {
@@ -326,17 +332,16 @@ a:hover {
   opacity: 1;
 }
 
-.footer-row p {
-  margin: 0;
-  color: #444;
-}
-
 .site-footer a {
   color: #333;
 }
 
-.site-footer a:hover {
-  color: #000;
+.footer-logos {
+  display: flex;
+  justify-content: center;   /* ← detta centrerar loggorna */
+  align-items: center;
+  gap: 30px;
+  width: 100%;               /* ← viktigt! */
 }
 
 /* RESPONSIVE */

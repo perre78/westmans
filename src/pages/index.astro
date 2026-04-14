@@ -10,7 +10,6 @@ import SiteLayout from '../layouts/SiteLayout.astro';
     <div class="container nav">
       <a class="logo" href="#top">Westmans</a>
       <nav>
-        <a href="/tjanster">Tjänster</a>
         <a href="/verkstaden">Verkstaden</a>
         <a href="/kontakt">Kontakt</a>
       </nav>
@@ -40,6 +39,7 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 
           <div class="cta-row">
             <a class="btn btn-primary" href="tel:061233018">Ring 0612-330 18</a>
+            <a class="btn btn-secondary" href="/kontakt">Kontaktuppgifter</a>
           </div>
 
           <ul class="hero-points">
@@ -52,49 +52,9 @@ import SiteLayout from '../layouts/SiteLayout.astro';
       </div>
     </section>
 
-    <section class="section" id="tjanster">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Tjänster</p>
-          <h2>Det här kan vi hjälpa dig med</h2>
-        </div>
-
-        <div class="grid-two">
-          <article class="card">
-            <h3>Service och reparation</h3>
-            <p>
-              Vi utför service och reparationer på personbilar, transportbilar och husbilar.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Däck</h3>
-            <p>
-              Vi säljer däck och hjälper dig att hitta rätt alternativ för din bil.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Felsökning</h3>
-            <p>
-              Med diagnosutrustning för både nya och äldre bilar kan vi snabbare hitta rätt fel.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>4-hjulsinställning</h3>
-            <p>
-              Vi har utrustning för hjulinställning och verkstadsarbeten som kräver specialverktyg.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section class="section alt" id="verkstaden">
       <div class="container content-split">
         <div>
-          <p class="eyebrow">Verkstaden</p>
           <h2>Rymlig verkstad för både vanliga och större fordon</h2>
           <p>
             Verkstaden byggdes 2008 och är anpassad för att kunna ta emot personbilar,
@@ -117,42 +77,5 @@ import SiteLayout from '../layouts/SiteLayout.astro';
         </aside>
       </div>
     </section>
-
-<section class="section" id="kontakt">
-  <div class="container contact-box">
-    <div>
-      <p class="eyebrow">Kontakt</p>
-      <h2>Välkommen att kontakta oss</h2>
-      <p>
-        Hör av dig om du vill boka service, få hjälp med reparation eller har frågor om däck och felsökning.
-      </p>
-    </div>
-
-    <div class="card contact-card">
-      <p><strong>Westmans Serviceverkstad</strong></p>
-
-      <p>
-        <a href="https://www.google.com/maps?q=Sandövägen+42,+872+64+Sandöverken" target="_blank" rel="noopener">
-          Sandövägen 42<br />
-          872 64 Sandöverken
-        </a>
-      </p>
-
-      <p style="margin-top:6px;">
-        <a href="https://www.google.com/maps?q=Sandövägen+42,+872+64+Sandöverken" target="_blank" rel="noopener">
-          📍 Visa på karta
-        </a><br />
-        <a href="https://www.google.com/maps?layer=c&cbll=62.8936,17.8585" target="_blank" rel="noopener">
-          👁️ Street View
-        </a>
-      </p>
-
-      <p>
-        <a href="tel:061233018">0612-330 18</a><br />
-        <a href="mailto:mail@westmans.com">mail@westmans.com</a>
-      </p>
-    </div>
-  </div>
-</section>
   </main>
 </SiteLayout>

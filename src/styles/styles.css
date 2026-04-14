@@ -1,6 +1,7 @@
 :root {
   --bg: #0f1114;
   --surface: #181d23;
+  --surface-2: #20262d;
   --text: #eef2f6;
   --muted: #a9b3bf;
   --line: #313944;
@@ -8,24 +9,78 @@
 
   --brand: #c31610;
   --brand-dark: #8f100c;
+  --brand-light: #ff5a4f;
 
   --radius: 18px;
   --max: 1120px;
+
+  --shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.22);
 }
 
 /* RESET */
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
   font-family: Inter, system-ui, sans-serif;
   color: var(--text);
+  line-height: 1.6;
   background:
     radial-gradient(circle at top, #2a2f36 0%, #16191d 35%, #0f1114 75%),
     linear-gradient(180deg, #111418 0%, #0f1114 100%);
 }
 
-/* LINKS (fixar lila problemet) */
+/* TYPOGRAPHY */
+h1,
+h2,
+h3 {
+  margin: 0 0 0.8rem;
+  line-height: 1.15;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.6rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+h3 {
+  font-size: 1.15rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+strong {
+  color: #ffffff;
+}
+
+.eyebrow {
+  margin: 0 0 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--brand-light);
+}
+
+.lead {
+  max-width: 62ch;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+/* LINKS */
 a {
   color: var(--text);
   text-decoration: none;
@@ -49,8 +104,10 @@ a:hover {
 .site-header {
   position: sticky;
   top: 0;
-  background: rgba(15,17,20,0.9);
+  z-index: 20;
+  background: rgba(15, 17, 20, 0.9);
   border-bottom: 1px solid var(--line-soft);
+  backdrop-filter: blur(10px);
 }
 
 .nav {
@@ -58,22 +115,18 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
+  gap: 1rem;
 }
 
-/* NAVIGATION FIX */
 .nav nav {
   display: flex;
   gap: 1.2rem;
+  flex-wrap: wrap;
 }
 
 .nav nav a {
   color: var(--text);
   font-weight: 600;
-  text-decoration: none;
-}
-
-.nav nav a:visited {
-  color: var(--text);
 }
 
 .nav nav a:hover {
@@ -81,23 +134,71 @@ a:hover {
   text-decoration: none;
 }
 
-/* LOGO */
 .logo {
   font-weight: 900;
   color: #fff;
   text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* HERO ART */
+.hero-art {
+  padding: 1.25rem 0 0.5rem;
+  text-align: center;
+}
+
+.hero-art-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 /* HERO */
 .hero {
-  padding: 4rem 0;
+  padding: 1.5rem 0 1rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.cta-row {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin: 1rem 0 1rem;
+}
+
+.hero-points {
+  margin: 0.75rem 0 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.hero-points li {
+  margin-bottom: 0.35rem;
 }
 
 /* BUTTONS */
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
   padding: 0.8rem 1.2rem;
   border-radius: 999px;
   font-weight: 700;
+  border: 1px solid transparent;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
 }
 
 .btn-primary {
@@ -105,15 +206,62 @@ a:hover {
   color: #fff;
 }
 
-/* SECTIONS */
-.section {
-  padding: 4rem 0;
+.btn-primary:hover {
+  filter: brightness(1.05);
 }
 
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  border-color: var(--line);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* SECTIONS */
+.section {
+  padding: 1.5rem 0;
+}
+
+.hero + .section {
+  padding-top: 0.75rem;
+}
+
+.alt {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02) 0%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.section-heading {
+  margin-bottom: 1rem;
+  max-width: 60ch;
+}
+
+/* GRIDS */
 .grid-two {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+}
+
+.content-split {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 1.5rem;
+}
+
+.contact-box {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1.5rem;
+  align-items: start;
 }
 
 /* CARD */
@@ -122,26 +270,48 @@ a:hover {
   border: 1px solid var(--line);
   padding: 1.2rem;
   border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
 }
 
-/* FOOTER */
+.note ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.note li + li {
+  margin-top: 0.35rem;
+}
+
+.contact-card p:last-child {
+  margin-bottom: 0;
+}
+
+.contact-card a {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.contact-card a:hover {
+  color: #ffd9d6;
+}
+
+/* FOOTER (VIT VERSION) */
 .site-footer {
   padding: 2rem 0 3rem;
-  color: var(--muted);
+  background: #ffffff;
+  color: #222;
 }
 
 .footer-inner {
-  border-top: 1px solid var(--line-soft);
+  border-top: 1px solid #ddd;
   padding-top: 1.5rem;
 }
 
-/* FOOTER LAYOUT */
 .footer-row {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.8rem;
-  width: 100%;
 }
 
 .footer-logos {
@@ -150,28 +320,91 @@ a:hover {
 }
 
 .footer-logos img {
-  height: 45px;
+  height: 100px;
+  width: auto;
+  object-fit: contain;
   opacity: 1;
 }
 
-/* Justera storlek visuellt */
-.footer-logos img[alt="Fiat"] { height: 55px; }
-.footer-logos img[alt="Fiat Professional"] { height: 40px; }
-.footer-logos img[alt="Motorbranschens Riksförbund"] { height: 60px; }
-
 .footer-row p {
   margin: 0;
-  text-align: left;
+  color: #444;
+}
+
+.site-footer a {
+  color: #333;
+}
+
+.site-footer a:hover {
+  color: #000;
 }
 
 /* RESPONSIVE */
 @media (max-width: 860px) {
-  .grid-two {
+  .grid-two,
+  .content-split,
+  .contact-box {
     grid-template-columns: 1fr;
   }
 
   .nav {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .nav nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .nav nav a {
+    display: block;
+    padding: 0.4rem 0;
+  }
+
+  .hero {
+    padding: 1.25rem 0 0.75rem;
+  }
+
+  .hero-art {
+    padding: 1rem 0 0.4rem;
+  }
+
+  .section {
+    padding: 1.25rem 0;
+  }
+
+  .hero + .section {
+    padding-top: 0.5rem;
+  }
+
+  p {
+    max-width: 100%;
+  }
+
+  .cta-row {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-row {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logos {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-row p {
+    text-align: center;
   }
 }

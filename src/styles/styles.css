@@ -212,6 +212,11 @@ a:hover {
   padding: 1.5rem 0 1rem;
 }
 
+.hero-small {
+  padding-top: 1.25rem;
+  padding-bottom: 0.75rem;
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -269,6 +274,31 @@ a:hover {
   border-bottom: 1px solid var(--line-soft);
 }
 
+.section-heading {
+  margin-bottom: 1.25rem;
+}
+
+/* GRID / CONTENT LAYOUTS */
+.grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.content-split {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.contact-box {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
 /* CARD */
 .card {
   background: var(--surface);
@@ -281,6 +311,10 @@ a:hover {
 
 .note {
   align-self: start;
+}
+
+.contact-card {
+  height: fit-content;
 }
 
 .plain-list {
@@ -335,6 +369,12 @@ a:hover {
 @media (max-width: 860px) {
   .btn {
     width: 100%;
+  }
+
+  .grid-two,
+  .content-split,
+  .contact-box {
+    grid-template-columns: 1fr;
   }
 }
 

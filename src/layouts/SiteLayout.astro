@@ -23,10 +23,23 @@ const BASE_URL = import.meta.env.BASE_URL;
   <body>
     <header class="site-header">
       <div class="container nav">
-        <div class="logo">
+        <a href={BASE_URL} class="logo">
           <img src={`${BASE_URL}img/logo.png`} alt="Westmans Serviceverkstad" />
-        </div>
-        <nav>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Öppna meny"
+          aria-expanded="false"
+          aria-controls="site-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav id="site-menu">
           <a href={BASE_URL}>Hem</a>
           <a href={`${BASE_URL}verkstaden/`}>Verkstaden</a>
           <a href={`${BASE_URL}bildelar/`}>Bildelar</a>
@@ -50,5 +63,24 @@ const BASE_URL = import.meta.env.BASE_URL;
         </div>
       </div>
     </footer>
+
+    <script>
+      const menuToggle = document.querySelector('.menu-toggle');
+      const siteMenu = document.querySelector('#site-menu');
+
+      if (menuToggle && siteMenu) {
+        menuToggle.addEventListener('click', () => {
+          const isOpen = siteMenu.classList.toggle('open');
+          menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        siteMenu.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', () => {
+            siteMenu.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+    </script>
   </body>
 </html>

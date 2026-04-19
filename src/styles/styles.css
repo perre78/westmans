@@ -68,7 +68,7 @@ strong {
   margin: 0 0 0.4rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-size: 1.0rem;
+  font-size: 1rem;
   font-weight: 800;
   color: var(--brand-light);
 }
@@ -112,14 +112,9 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
-  padding: 1rem 0;
-}
-
-.nav nav {
-  display: flex;
-  gap: 1.2rem;
-  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  position: relative;
 }
 
 .logo {
@@ -139,6 +134,34 @@ a:hover {
   font-size: 2rem;
   font-weight: 900;
   letter-spacing: 0.06em;
+}
+
+.nav nav {
+  display: flex;
+  gap: 1.8rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MENYKNAPP */
+.menu-toggle {
+  display: none;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 0.25rem;
+  margin: 0;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  margin: 5px 0;
+  border-radius: 999px;
+  background: #222;
 }
 
 /* MENYLÄNKAR */
@@ -310,17 +333,76 @@ a:hover {
 
 /* RESPONSIVE */
 @media (max-width: 860px) {
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
   .nav {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.65rem 0;
+    gap: 1rem;
+  }
+
+  .logo {
+    justify-content: flex-start;
+    width: auto;
+    flex: 1;
+  }
+
+  .logo img {
+    height: 56px;
+    max-width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+    flex-shrink: 0;
   }
 
   .nav nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border-top: 1px solid #e5e5e5;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
     flex-direction: column;
-    width: 100%;
+    align-items: flex-start;
+    gap: 0;
+    padding: 0.4rem 1rem;
   }
 
-  .btn {
+  .nav nav.open {
+    display: flex;
+  }
+
+  .site-header .nav nav a {
+    display: block;
     width: 100%;
+    padding: 0.95rem 0;
+    border-bottom: 1px solid #ececec;
+  }
+
+  .site-header .nav nav a:last-child {
+    border-bottom: 0;
+  }
+
+  .site-header .nav nav a::after {
+    display: none;
+  }
+
+  .footer-logos {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .footer-logos img {
+    height: 72px;
   }
 }

@@ -1,24 +1,13 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
+
+const BASE_URL = import.meta.env.BASE_URL;
 ---
 
 <SiteLayout
-  title="Tjänster – Westmans Serviceverkstad"
+  title="Verkstaden – Westmans Serviceverkstad"
   description="Service, felsökning, hjulinställning och verkstadsarbeten för personbilar, transportbilar och husbilar."
 >
-  <header class="site-header">
-    <div class="container nav">
-      <div class="logo">
-        <img src="/img/logo.png" alt="Westmans Serviceverkstad">
-      </div>
-      <nav>
-        <a href="/">Hem</a>
-        <a href="/verkstaden">Verkstaden</a>
-        <a href="/kontakt">Kontakt</a>
-      </nav>
-    </div>
-  </header>
-
   <main>
     <section class="hero">
       <div class="container hero-grid">
@@ -34,7 +23,7 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 
           <div class="cta-row">
             <a class="btn btn-primary" href="tel:061233018">Ring 0612-330 18</a>
-            <a class="btn btn-secondary" href="/kontakt">Kontaktuppgifter</a>
+            <a class="btn btn-secondary" href={`${BASE_URL}kontakt/`}>Kontaktuppgifter</a>
           </div>
         </div>
       </div>

@@ -317,6 +317,37 @@ a:hover {
   height: fit-content;
 }
 
+.contact-images {
+  display: flex;
+  gap: 24px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-person {
+  text-align: center;
+}
+
+.contact-person img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #111;
+}
+
+.contact-person a {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.contact-person a:hover {
+  text-decoration: underline;
+}
+
 .plain-list {
   margin: 0.75rem 0 0;
   padding-left: 1.2rem;

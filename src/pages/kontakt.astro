@@ -1,6 +1,6 @@
 ---
 import SiteLayout from "../layouts/SiteLayout.astro";
-const base = import.meta.env.BASE_URL;
+const BASE_URL = import.meta.env.BASE_URL;
 ---
 
 <SiteLayout
@@ -42,17 +42,17 @@ const base = import.meta.env.BASE_URL;
   <!-- NY DEL -->
   <div class="container contact-images">
     <div class="contact-person">
-      <img src="/img/placeholder-dark.png" alt="Kontaktperson" />
+      <img src={`${BASE_URL}img/placeholder-dark.png`} alt="Kontaktperson" />
       <p><a href="mailto:person1@westmans.com">person1@westmans.com</a></p>
     </div>
 
     <div class="contact-person">
-      <img src="/img/placeholder-dark.png" alt="Kontaktperson" />
+      <img src={`${BASE_URL}img/placeholder-dark.png`} alt="Kontaktperson" />
       <p><a href="mailto:person2@westmans.com">person2@westmans.com</a></p>
     </div>
 
     <div class="contact-person">
-      <img src="/img/placeholder-dark.png" alt="Kontaktperson" />
+      <img src={`${BASE_URL}img/placeholder-dark.png`} alt="Kontaktperson" />
       <p><a href="mailto:person3@westmans.com">person3@westmans.com</a></p>
     </div>
   </div>

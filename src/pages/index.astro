@@ -1,6 +1,6 @@
 ---
 import SiteLayout from "../layouts/SiteLayout.astro";
-const base = import.meta.env.BASE_URL;
+const BASE_URL = import.meta.env.BASE_URL;
 ---
 
 <SiteLayout
@@ -11,7 +11,7 @@ const base = import.meta.env.BASE_URL;
     <section class="hero-art">
       <div class="container">
         <img
-          src={`${base}img/lonar-sig-i-langden.png`}
+          src={`${BASE_URL}img/lonar-sig-i-langden.png`}
           alt="Westmans – Ordentliga reparationer lönar sig i längden"
           class="hero-art-image"
         />
@@ -30,7 +30,7 @@ const base = import.meta.env.BASE_URL;
 
           <div class="cta-row">
             <a class="btn btn-primary" href="tel:061233018">Ring 0612-330 18</a>
-            <a class="btn btn-secondary" href={`${base}kontakt/`}>Kontaktuppgifter</a>
+            <a class="btn btn-secondary" href={`${BASE_URL}kontakt/`}>Kontaktuppgifter</a>
           </div>
 
           <ul class="hero-points">

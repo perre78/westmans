@@ -8,19 +8,9 @@ const BASE_URL = import.meta.env.BASE_URL;
   description="Service och reparationer på personbilar, transportbilar och husbilar"
 >
   <main id="top">
-    <section class="hero-art">
-      <div class="container">
-        <img
-          src={`${BASE_URL}img/lonar-sig-i-langden.png`}
-          alt="Westmans – Ordentliga reparationer lönar sig i längden"
-          class="hero-art-image"
-        />
-      </div>
-    </section>
-
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
+    <section class="home-hero">
+      <div class="container home-hero-grid">
+        <div class="home-hero-copy">
           <p class="eyebrow">Allbilverkstad i Kramfors kommun</p>
           <h1>Service och reparationer för personbilar, transportbilar och husbilar</h1>
           <p class="lead">
@@ -39,6 +29,14 @@ const BASE_URL = import.meta.env.BASE_URL;
             <li>Däck</li>
             <li>Felsökning</li>
           </ul>
+        </div>
+
+        <div class="home-hero-art">
+          <img
+            src={`${BASE_URL}img/lonar-sig-i-langden-light.png`}
+            alt="Westmans – Ordentliga reparationer lönar sig i längden"
+            class="hero-art-image"
+          />
         </div>
       </div>
     </section>

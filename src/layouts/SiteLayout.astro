@@ -7,6 +7,18 @@ const {
 import "../styles/styles.css";
 
 const BASE_URL = import.meta.env.BASE_URL;
+const currentPath = Astro.url.pathname;
+
+const isActive = (path: string) => {
+  const normalizedBase = BASE_URL.endsWith('/') ? BASE_URL : `${BASE_URL}/`;
+  const targetPath = path === normalizedBase ? normalizedBase : path;
+
+  if (targetPath === normalizedBase) {
+    return currentPath === normalizedBase || currentPath === `${normalizedBase}index.html`;
+  }
+
+  return currentPath.startsWith(targetPath);
+};
 ---
 
 <!doctype html>
@@ -40,10 +52,10 @@ const BASE_URL = import.meta.env.BASE_URL;
         </button>
 
         <nav id="site-menu">
-          <a href={BASE_URL}>Hem</a>
-          <a href={`${BASE_URL}verkstaden/`}>Verkstaden</a>
-          <a href={`${BASE_URL}bildelar/`}>Bildelar</a>
-          <a href={`${BASE_URL}kontakt/`}>Kontakt</a>
+          <a href={BASE_URL} class:list={{ active: isActive(BASE_URL) }}>Hem</a>
+          <a href={`${BASE_URL}verkstaden/`} class:list={{ active: isActive(`${BASE_URL}verkstaden/`) }}>Verkstaden</a>
+          <a href={`${BASE_URL}bildelar/`} class:list={{ active: isActive(`${BASE_URL}bildelar/`) }}>Bildelar</a>
+          <a href={`${BASE_URL}kontakt/`} class:list={{ active: isActive(`${BASE_URL}kontakt/`) }}>Kontakt</a>
         </nav>
       </div>
     </header>

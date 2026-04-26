@@ -33,48 +33,50 @@ const isActive = (path: string) => {
   </head>
 
   <body>
-    <header class="site-header">
-      <div class="container nav">
-        <a href={BASE_URL} class="logo">
-          <img src={`${BASE_URL}img/logo.png`} alt="Westmans Serviceverkstad" />
-        </a>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container nav">
+          <a href={BASE_URL} class="logo">
+            <img src={`${BASE_URL}img/logo.png`} alt="Westmans Serviceverkstad" />
+          </a>
 
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-label="Öppna meny"
-          aria-expanded="false"
-          aria-controls="site-menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Öppna meny"
+            aria-expanded="false"
+            aria-controls="site-menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
-        <nav id="site-menu">
-          <a href={BASE_URL} class:list={{ active: isActive(BASE_URL) }}>Hem</a>
-          <a href={`${BASE_URL}verkstaden/`} class:list={{ active: isActive(`${BASE_URL}verkstaden/`) }}>Verkstaden</a>
-          <a href={`${BASE_URL}bildelar/`} class:list={{ active: isActive(`${BASE_URL}bildelar/`) }}>Bildelar</a>
-          <a href={`${BASE_URL}kontakt/`} class:list={{ active: isActive(`${BASE_URL}kontakt/`) }}>Kontakt</a>
-        </nav>
-      </div>
-    </header>
-
-    <slot />
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-row">
-          <div class="footer-logos">
-            <img src={`${BASE_URL}img/fiat-logo.jpg`} alt="Fiat" />
-            <img src={`${BASE_URL}img/fiat-professional.jpg`} alt="Fiat Professional" />
-            <img src={`${BASE_URL}img/fiat-mrf-logo.jpg`} alt="Motorbranschens Riksförbund" />
-          </div>
-
-          <p>&copy; Westmans Serviceverkstad</p>
+          <nav id="site-menu">
+            <a href={BASE_URL} class:list={{ active: isActive(BASE_URL) }}>Hem</a>
+            <a href={`${BASE_URL}verkstaden/`} class:list={{ active: isActive(`${BASE_URL}verkstaden/`) }}>Verkstaden</a>
+            <a href={`${BASE_URL}bildelar/`} class:list={{ active: isActive(`${BASE_URL}bildelar/`) }}>Bildelar</a>
+            <a href={`${BASE_URL}kontakt/`} class:list={{ active: isActive(`${BASE_URL}kontakt/`) }}>Kontakt</a>
+          </nav>
         </div>
-      </div>
-    </footer>
+      </header>
+
+      <slot />
+
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <div class="footer-row">
+            <div class="footer-logos">
+              <img src={`${BASE_URL}img/fiat-logo.jpg`} alt="Fiat" />
+              <img src={`${BASE_URL}img/fiat-professional.jpg`} alt="Fiat Professional" />
+              <img src={`${BASE_URL}img/fiat-mrf-logo.jpg`} alt="Motorbranschens Riksförbund" />
+            </div>
+
+            <p>&copy; Westmans Serviceverkstad</p>
+          </div>
+        </div>
+      </footer>
+    </div>
 
     <script>
       const menuToggle = document.querySelector('.menu-toggle');

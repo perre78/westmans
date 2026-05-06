@@ -63,7 +63,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  font-size: 22px;
 }
 
 h3 {
@@ -346,6 +346,10 @@ a:hover {
 
 #kontakt {
   background: var(--section-tint);
+}
+
+#kontakt .section-heading .lead {
+  max-width: none;
 }
 
 .section-heading {

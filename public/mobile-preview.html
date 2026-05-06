@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mobilpreview - Westmans Verkstaden</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        background: #202226;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      body {
+        display: grid;
+        place-items: start center;
+        padding: 28px 16px;
+        color: #ffffff;
+      }
+
+      .label {
+        width: 390px;
+        max-width: 100%;
+        margin: 0 0 10px;
+        color: #d7d9de;
+        font-size: 14px;
+      }
+
+      .phone {
+        width: 390px;
+        height: 844px;
+        max-width: 100%;
+        overflow: hidden;
+        background: #ffffff;
+        border: 10px solid #101114;
+        border-radius: 34px;
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+      }
+
+      iframe {
+        display: block;
+        width: 390px;
+        height: 844px;
+        border: 0;
+        background: #ffffff;
+        transform-origin: top left;
+      }
+
+      @media (max-width: 440px) {
+        body {
+          padding: 12px 0;
+        }
+
+        .label {
+          width: calc(100vw - 24px);
+        }
+
+        .phone {
+          width: calc(100vw - 24px);
+          height: calc((100vw - 24px) * 844 / 390);
+        }
+
+        iframe {
+          transform: scale(calc((100vw - 24px) / 390));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="label">Mobilpreview: 390 x 844 px</div>
+    <div class="phone">
+      <iframe src="/westmans/verkstaden/" title="Westmans Verkstaden i mobilvy"></iframe>
+    </div>
+  </body>
+</html>

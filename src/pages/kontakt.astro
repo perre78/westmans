@@ -8,59 +8,67 @@ const BASE_URL = import.meta.env.BASE_URL;
   description="Kontakta Westmans Serviceverkstad för service, reparationer, däck och felsökning."
 >
   <main>
-<section class="section" id="kontakt">
-  <div class="container contact-box contact-box-single">
-    <div class="card contact-card">
-      <p><strong>Westmans Serviceverkstad</strong></p>
+    <section class="section" id="kontakt">
+      <div class="container section-heading">
+        <p class="eyebrow">Kontakt</p>
+        <h1>Välkommen att kontakta oss</h1>
+        <p class="lead">
+          Hör av dig om du vill boka service, få hjälp med reparation eller har frågor om däck och felsökning.
+        </p>
+      </div>
 
-      <div class="contact-list">
-        <div class="contact-row">
-          <span class="contact-label">Telefon</span>
-          <a href="tel:061233018">0612-330 18</a>
-        </div>
+      <div class="container contact-box contact-box-single">
+        <div class="card contact-card">
+          <p><strong>Westmans Serviceverkstad</strong></p>
 
-        <div class="contact-row">
-          <span class="contact-label">Mail</span>
-          <a href="mailto:mail@westmans.com">mail@westmans.com</a>
-        </div>
+          <div class="contact-list">
+            <div class="contact-row">
+              <span class="contact-label">Telefon</span>
+              <a href="tel:061233018">0612-330 18</a>
+            </div>
 
-        <div class="contact-row">
-          <span class="contact-label">Adress</span>
-          <span>Sandövägen 42<br />872 64 Sandöverken</span>
-        </div>
+            <div class="contact-row">
+              <span class="contact-label">Mail</span>
+              <a href="mailto:mail@westmans.com">mail@westmans.com</a>
+            </div>
 
-        <div class="contact-row">
-          <span class="contact-label">Karta</span>
-          <a href="https://www.google.com/maps?q=Sandövägen+42,+872+64+Sandöverken" target="_blank" rel="noopener">
-            Visa på karta
-          </a>
-        </div>
+            <div class="contact-row">
+              <span class="contact-label">Adress</span>
+              <span>Sandövägen 42<br />872 64 Sandöverken</span>
+            </div>
 
-        <div class="contact-row">
-          <span class="contact-label">Öppettider</span>
-          <span>Mån-tors 07.00-16.00<br />Fre 07.00-14.00</span>
+            <div class="contact-row">
+              <span class="contact-label">Karta</span>
+              <a href="https://www.google.com/maps?q=Sandövägen+42,+872+64+Sandöverken" target="_blank" rel="noopener">
+                Visa på karta
+              </a>
+            </div>
+
+            <div class="contact-row">
+              <span class="contact-label">Öppettider</span>
+              <span>Mån-tors 07.00-16.00<br />Fre 07.00-14.00</span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- NY DEL -->
-  <div class="container contact-images">
-    <div class="contact-person">
-      <img src={`${BASE_URL}img/placeholder-dark.png`} alt="Kontaktperson" />
-      <p><a href="mailto:person1@westmans.com">person1@westmans.com</a></p>
-    </div>
+      <!-- NY DEL -->
+      <div class="container contact-images">
+        <div class="contact-person">
+          <img src={`${BASE_URL}img/placeholder-dark.png`} alt="Kontaktperson" />
+          <p><a href="mailto:person1@westmans.com">person1@westmans.com</a></p>
+        </div>
 
-    <div class="contact-person">
-      <img src={`${BASE_URL}img/placeholder-dark.png`} alt="Kontaktperson" />
-      <p><a href="mailto:person2@westmans.com">person2@westmans.com</a></p>
-    </div>
+        <div class="contact-person">
+          <img src={`${BASE_URL}img/placeholder-dark.png`} alt="Kontaktperson" />
+          <p><a href="mailto:person2@westmans.com">person2@westmans.com</a></p>
+        </div>
 
-    <div class="contact-person">
-      <img src={`${BASE_URL}img/placeholder-dark.png`} alt="Kontaktperson" />
-      <p><a href="mailto:person3@westmans.com">person3@westmans.com</a></p>
-    </div>
-  </div>
-</section>
+        <div class="contact-person">
+          <img src={`${BASE_URL}img/placeholder-dark.png`} alt="Kontaktperson" />
+          <p><a href="mailto:person3@westmans.com">person3@westmans.com</a></p>
+        </div>
+      </div>
+    </section>
   </main>
 </SiteLayout>

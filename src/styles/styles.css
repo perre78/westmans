@@ -366,6 +366,34 @@ a:hover {
   align-items: start;
 }
 
+.experience-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(220px, 0.75fr);
+  gap: 1.75rem;
+  align-items: start;
+}
+
+.experience-copy {
+  max-width: 680px;
+}
+
+.experience-copy .note {
+  margin-top: 1.4rem;
+}
+
+.experience-image {
+  margin: 0;
+  align-self: end;
+  justify-self: end;
+  max-width: 240px;
+}
+
+.experience-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .contact-box {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(280px, 1fr);
@@ -524,8 +552,13 @@ a:hover {
   .home-hero-grid,
   .grid-two,
   .content-split,
+  .experience-layout,
   .contact-box {
     grid-template-columns: 1fr;
+  }
+
+  .experience-image {
+    display: none;
   }
 
   .home-hero {

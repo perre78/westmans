@@ -21,42 +21,52 @@ const BASE_URL = import.meta.env.BASE_URL;
         <h2>Däck och fälgar</h2>
       </div>
 
-      <div class="lead">
+      <div class="tires-layout">
+        <div class="tires-copy">
+          <div class="lead">
           <p>
             Vi säljer däck och fälgar i flera olika prisklasser och hjälper dig att hitta
             ett alternativ som passar både bilen och din budget.
           </p>
-      </div>
-  
-        <article class="card">
-          <h3>Däck</h3>
-          <p>
-            Vi erbjuder däck i alla prisnivåer från flera välkända tillverkare.
-          </p>
-          <ul class="plain-list">
-            <li>Michelin</li>
-            <li>Goodyear</li>
-            <li>Pirelli</li>
-            <li>Continental</li>
-            <li>Bridgestone</li>
-            <li>Firestone</li>
-            <li>Nokian</li>
-            <li>Kumho</li>
-          </ul>
-        </br>
-          <h3>Stål- och alufälgar</h3>
-          <p>
-            Stål- och alufälgar finns för beställning till bra priser.
-          </p>
-        </article>
+          </div>
 
-        <article class="card">
-          <h3>Hjälp att välja rätt</h3>
-          <p>
-            Är du osäker på vilka däck eller fälgar som passar din bil hjälper
-            vi dig gärna att hitta rätt.
-          </p>
-        </article>
+          <article class="card">
+            <h3>Däck</h3>
+            <p>
+              Vi erbjuder däck i alla prisnivåer från flera välkända tillverkare.
+            </p>
+            <ul class="plain-list">
+              <li>Michelin</li>
+              <li>Goodyear</li>
+              <li>Pirelli</li>
+              <li>Continental</li>
+              <li>Bridgestone</li>
+              <li>Firestone</li>
+              <li>Nokian</li>
+              <li>Kumho</li>
+            </ul>
+
+            <h3>Stål- och alufälgar</h3>
+            <p>
+              Stål- och alufälgar finns för beställning till bra priser.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Hjälp att välja rätt</h3>
+            <p>
+              Är du osäker på vilka däck eller fälgar som passar din bil hjälper
+              vi dig gärna att hitta rätt.
+            </p>
+          </article>
+        </div>
+
+        <figure class="tires-image">
+          <img
+            src={`${BASE_URL}img/dack-falgar-cartoon.png`}
+            alt="Tecknad bild av däck och fälgar"
+          />
+        </figure>
       </div>
     </div>
   </section>

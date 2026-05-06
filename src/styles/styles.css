@@ -366,6 +366,39 @@ a:hover {
   align-items: start;
 }
 
+.tires-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 0.28fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.tires-copy {
+  display: grid;
+  gap: 1rem;
+}
+
+.tires-copy .lead {
+  margin: 0;
+}
+
+.tires-copy .card h3 + p,
+.tires-copy .plain-list + h3 {
+  margin-top: 1.35rem;
+}
+
+.tires-image {
+  margin: 0;
+  justify-self: end;
+  max-width: 210px;
+}
+
+.tires-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .experience-layout {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(220px, 0.75fr);
@@ -552,9 +585,15 @@ a:hover {
   .home-hero-grid,
   .grid-two,
   .content-split,
+  .tires-layout,
   .experience-layout,
   .contact-box {
     grid-template-columns: 1fr;
+  }
+
+  .tires-image {
+    justify-self: center;
+    max-width: min(100%, 260px);
   }
 
   .experience-image {

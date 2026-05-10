@@ -52,9 +52,23 @@ const isActive = (path: string) => {
     <div class="site-shell">
       <header class="site-header">
         <div class="container nav">
-          <a href={BASE_URL} class="logo">
-            <img src={`${BASE_URL}img/logo2.png`} alt="Westmans Serviceverkstad" />
-          </a>
+          <div class="logo-row">
+            <img
+              src={`${BASE_URL}img/tire-stack.png`}
+              alt=""
+              class="header-tires"
+              aria-hidden="true"
+            />
+            <a href={BASE_URL} class="logo">
+              <img src={`${BASE_URL}img/logo2.png`} alt="Westmans Serviceverkstad" />
+            </a>
+            <img
+              src={`${BASE_URL}img/tire-stack.png`}
+              alt=""
+              class="header-tires header-tires-right"
+              aria-hidden="true"
+            />
+          </div>
 
           <button
             class="menu-toggle"

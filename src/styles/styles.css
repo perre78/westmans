@@ -89,6 +89,10 @@ strong {
   color: var(--brand-light);
 }
 
+.home-eyebrow {
+  text-transform: none;
+}
+
 .lead {
   max-width: 62ch;
   font-size: 1.08rem;
@@ -152,6 +156,15 @@ a:hover {
   position: relative;
 }
 
+.logo-row {
+  display: grid;
+  grid-template-columns: 120px minmax(220px, 340px) 120px;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .logo {
   display: flex;
   justify-content: center;
@@ -162,6 +175,17 @@ a:hover {
   width: min(100%, 340px);
   height: auto;
   display: block;
+}
+
+.header-tires {
+  width: 108px;
+  height: auto;
+  justify-self: end;
+}
+
+.header-tires-right {
+  justify-self: start;
+  transform: scaleX(-1);
 }
 
 .site-header .logo {
@@ -680,6 +704,16 @@ a:hover {
   .logo img {
     width: min(100%, 240px);
     height: auto;
+  }
+
+  .logo-row {
+    display: block;
+    width: auto;
+    flex: 1;
+  }
+
+  .header-tires {
+    display: none;
   }
 
   .menu-toggle {

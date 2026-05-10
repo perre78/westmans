@@ -10,9 +10,11 @@
 
   --page-frame: #5a2112;
   --page-frame-dark: #35130b;
-  --brand: #9a3811;
-  --brand-dark: #8f100c;
-  --brand-light: #b64218;
+  --brand: #0b2238;
+  --brand-dark: #061725;
+  --brand-light: #143a5c;
+  --action: #b3262d;
+  --action-dark: #8f151b;
 
   --radius: 8px;
   --max: 1120px;
@@ -104,6 +106,24 @@ a:visited {
 
 a:hover {
   text-decoration: underline;
+}
+
+.text-link {
+  color: var(--action-dark);
+  font-weight: 700;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+}
+
+.text-link:visited {
+  color: var(--action-dark);
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  color: var(--action);
+  text-decoration-thickness: 3px;
 }
 
 /* LAYOUT */
@@ -318,13 +338,13 @@ a:hover {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--brand-dark), var(--brand));
+  background: linear-gradient(135deg, var(--action-dark), var(--action));
   color: #fff;
 }
 
 .btn-secondary {
   background: #ffffff;
-  color: var(--brand-dark);
+  color: var(--action-dark);
   border-color: var(--line);
 }
 
@@ -483,7 +503,7 @@ a:hover {
 }
 
 .contact-row a {
-  color: var(--brand-dark);
+  color: var(--action-dark);
   font-weight: 700;
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
@@ -492,7 +512,7 @@ a:hover {
 
 .contact-row a:hover,
 .contact-row a:focus-visible {
-  color: var(--brand);
+  color: var(--action);
   text-decoration-thickness: 3px;
 }
 
@@ -527,7 +547,7 @@ a:hover {
 .contact-person a {
   display: inline-block;
   margin-top: 8px;
-  color: var(--brand-dark);
+  color: var(--action-dark);
   font-weight: 700;
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
@@ -536,7 +556,7 @@ a:hover {
 
 .contact-person a:hover,
 .contact-person a:focus-visible {
-  color: var(--brand);
+  color: var(--action);
   text-decoration-thickness: 3px;
 }
 

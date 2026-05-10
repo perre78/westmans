@@ -10,7 +10,7 @@ const BASE_URL = import.meta.env.BASE_URL;
 const currentPath = Astro.url.pathname;
 const canonicalUrl = Astro.url.href.replace(/index\.html$/, '');
 const siteUrl = Astro.site ?? Astro.url;
-const ogImageUrl = new URL(`${BASE_URL}img/logo.png`, siteUrl).href;
+const ogImageUrl = new URL(`${BASE_URL}img/logo2.png`, siteUrl).href;
 
 const isActive = (path: string) => {
   const normalizedBase = BASE_URL.endsWith('/') ? BASE_URL : `${BASE_URL}/`;

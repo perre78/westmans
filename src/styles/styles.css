@@ -139,8 +139,8 @@ a:hover {
 }
 
 .logo img {
-  height: 100px;
-  width: auto;
+  width: min(100%, 340px);
+  height: auto;
   display: block;
 }
 
@@ -658,8 +658,8 @@ a:hover {
   }
 
   .logo img {
-    height: 56px;
-    max-width: 100%;
+    width: min(100%, 240px);
+    height: auto;
   }
 
   .menu-toggle {

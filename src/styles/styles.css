@@ -485,11 +485,15 @@ a:hover {
 .contact-row a {
   color: var(--brand-dark);
   font-weight: 700;
-  text-decoration: none;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
 }
 
-.contact-row a:hover {
-  text-decoration: underline;
+.contact-row a:hover,
+.contact-row a:focus-visible {
+  color: var(--brand);
+  text-decoration-thickness: 3px;
 }
 
 .contact-label {
@@ -523,12 +527,17 @@ a:hover {
 .contact-person a {
   display: inline-block;
   margin-top: 8px;
-  color: var(--text);
-  text-decoration: none;
+  color: var(--brand-dark);
+  font-weight: 700;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
 }
 
-.contact-person a:hover {
-  text-decoration: underline;
+.contact-person a:hover,
+.contact-person a:focus-visible {
+  color: var(--brand);
+  text-decoration-thickness: 3px;
 }
 
 .plain-list {

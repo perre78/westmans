@@ -7,154 +7,145 @@ const BASE_URL = import.meta.env.BASE_URL;
   title="Bildelar – Westmans Serviceverkstad"
   description="Däck, fälgar, batterier och reservdelar från Westmans Serviceverkstad"
 >
-  <section class="hero hero-small">
-    <div class="container">
-      <p class="eyebrow">Däck, batterier och reservdelar</p>
-      <h1>Bildelar och tillbehör</h1>
-      <p class="lead">
-        Hos oss kan du beställa bildelar och tillbehör till bra priser.
-        Vi erbjuder däck i flera prisklasser, batterier med hög prestanda
-        samt möjlighet till avhämtning i Kramfors.
-      </p>
-    </div>
-  </section>
+  <main>
+    <section class="hero hero-small">
+      <div class="container">
+        <p class="eyebrow">Däck, batterier och reservdelar</p>
+        <h1>Bildelar och tillbehör</h1>
+        <p class="lead">
+          Beställ däck, fälgar, batterier och reservdelar till bra priser.
+          Vi hjälper dig att hitta rätt del och erbjuder avhämtning i Kramfors.
+        </p>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-heading">
-        <h2>Däck och fälgar</h2>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="tel:061233018">Ring om bildelar</a>
+          <a class="btn btn-secondary" href={`${BASE_URL}kontakt/`}>Fråga om pris</a>
+        </div>
       </div>
+    </section>
 
-      <div class="tires-layout">
-        <div class="tires-copy">
-          <div class="lead">
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Däck och fälgar</h2>
           <p>
-            Vi säljer däck och fälgar i flera olika prisklasser och hjälper dig att hitta
-            ett alternativ som passar både bilen och din budget.
+            Vi har alternativ i flera prisklasser och hjälper dig välja rätt
+            för bilen och budgeten.
           </p>
-          </div>
-
-          <article class="card">
-            <h3>Däck</h3>
-            <p>
-              Vi erbjuder däck i alla prisnivåer från flera välkända tillverkare.
-            </p>
-            <ul class="plain-list">
-              <li>Michelin</li>
-              <li>Goodyear</li>
-              <li>Pirelli</li>
-              <li>Continental</li>
-              <li>Bridgestone</li>
-              <li>Firestone</li>
-              <li>Nokian</li>
-              <li>Kumho</li>
-            </ul>
-
-            <h3>Stål- och alufälgar</h3>
-            <p>
-              Stål- och alufälgar finns för beställning till bra priser.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Hjälp att välja rätt</h3>
-            <p>
-              Är du osäker på vilka däck eller fälgar som passar din bil hjälper
-              vi dig gärna att hitta rätt.
-            </p>
-          </article>
         </div>
 
-        <figure class="tires-image">
-          <img
-            src={`${BASE_URL}img/dack-falgar-cartoon.png`}
-            alt="Tecknad bild av däck och fälgar"
-          />
-        </figure>
+        <div class="tires-layout">
+          <div class="tires-copy details-stack">
+            <details class="info-details">
+              <summary>
+                <span class="details-title">Däck</span>
+                <span class="details-summary">Flera välkända tillverkare</span>
+              </summary>
+              <div class="details-body">
+                <p>Vi erbjuder bland annat:</p>
+                <ul class="plain-list compact-list">
+                  <li>Michelin</li>
+                  <li>Goodyear</li>
+                  <li>Pirelli</li>
+                  <li>Continental</li>
+                  <li>Bridgestone</li>
+                  <li>Firestone</li>
+                  <li>Nokian</li>
+                  <li>Kumho</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="info-details">
+              <summary>
+                <span class="details-title">Stål- och alufälgar</span>
+                <span class="details-summary">Beställning och hjälp att välja</span>
+              </summary>
+              <div class="details-body">
+                <p>
+                  Fälgar finns för beställning. Är du osäker på vad som passar
+                  din bil hjälper vi dig att hitta rätt.
+                </p>
+              </div>
+            </details>
+          </div>
+
+          <figure class="tires-image">
+            <img
+              src={`${BASE_URL}img/dack-falgar-cartoon.png`}
+              alt="Tecknad bild av däck och fälgar"
+            />
+          </figure>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section alt">
-    <div class="container">
-      <div class="section-heading">
-        <h2>Batterier</h2>
+    <section class="section alt">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Batterier</h2>
+          <p>Startbatterier med hög effekt och driftsäkerhet.</p>
+        </div>
+
+        <div class="details-stack">
+          <details class="info-details">
+            <summary>
+              <span class="details-title">Tudor Maxxima 900</span>
+              <span class="details-summary">Hög starteffekt och låg vikt</span>
+            </summary>
+            <div class="details-body">
+              <ul class="plain-list">
+                <li>Passar bland annat 4-hjulsdrivna fordon</li>
+                <li>Läckagesäkert och vibrationståligt</li>
+                <li>Snabbladdat med mycket hög kallstarteffekt</li>
+              </ul>
+            </div>
+          </details>
+        </div>
       </div>
+    </section>
 
-      <div class="grid-two">
-        <article class="card">
-          <h3>Tudor Maxxima 900</h3>
-          <p>
-            Tudor Maxxima 900 är en ny typ av startbatteri för dig som inte
-            kompromissar med starteffekt och driftsäkerhet.
-          </p>
-        </article>
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">För Kramforsbor</p>
+          <h2>Beställning och avhämtning</h2>
+          <p>Se delar i MECA:s katalog eller kontakta oss för pris och beställning.</p>
+        </div>
 
-        <article class="card">
-          <h3>Fördelar</h3>
-          <ul class="plain-list">
-            <li>För 4-hjulsdrift</li>
-            <li>100% läckagesäkert oavsett hur det monteras</li>
-            <li>Extremt vibrationståligt</li>
-            <li>Snabbladdat batteri med låg vikt</li>
-            <li>Mycket hög kallstarteffekt</li>
-          </ul>
-        </article>
+        <div class="details-stack">
+          <details class="info-details">
+            <summary>
+              <span class="details-title">MECA-katalog och leveranstid</span>
+              <span class="details-summary">Lagerförda delar levereras ofta nästa dag</span>
+            </summary>
+            <div class="details-body">
+              <p>
+                Se instruktionen för MECA:s katalog:
+                <a class="text-link" href="https://www.meca.se/wp-content/uploads/2023/06/Nytt-inloggningsforfarande-catalog.meca_.se-no_minskad.pdf" target="_blank" rel="noopener noreferrer">
+                  öppna kataloginformationen
+                </a>.
+              </p>
+              <p>
+                Delar som finns i lager och beställs dag 1 levereras normalt dag 2.
+              </p>
+            </div>
+          </details>
+
+          <details class="info-details">
+            <summary>
+              <span class="details-title">Avhämtning i Kramfors</span>
+              <span class="details-summary">Måndag–torsdag 17–18 eller enligt överenskommelse</span>
+            </summary>
+            <div class="details-body">
+              <p>
+                Avhämtning sker på Mällbyvägen 38 hos Per-Owe. För pris och
+                beställning, <a class="text-link" href={`${BASE_URL}kontakt/`}>kontakta oss</a>.
+              </p>
+            </div>
+          </details>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">För Kramforsbor</p>
-        <h2>Beställning och avhämtning</h2>
-      </div>
-
-      <div class="grid-two">
-        <article class="card">
-          <h3>MECA webshop</h3>
-          <p>
-            Du kan se bildelar, verktyg och tillbehör via MECA:s webshop:
-          </p>
-          <p>
-            <a class="text-link" href="https://www.meca.se/wp-content/uploads/2023/06/Nytt-inloggningsforfarande-catalog.meca_.se-no_minskad.pdf" target="_blank" rel="noopener noreferrer">
-              catalog.meca.se
-            </a>
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Avhämtning i Kramfors</h3>
-          <p>
-            Kramforsbor har möjlighet att köpa bra bildelar och tillbehör till
-            bra priser. Avhämtning av bildelar kan ske i Kramfors på begäran.
-          </p>
-          <p>
-            Utlämning sker på Mällbyvägen 38 hos Per-Owe, normalt mellan
-            17–18 måndag till torsdag, eller efter överenskommen tid.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Leveranstid</h3>
-          <p>
-            Delar som finns lagerförda hos MECA och beställs dag 1 levereras
-            normalt dag 2.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Priser och frågor</h3>
-          <p>
-            För priser på artiklar till din bil kan du titta i MECA webshop
-            eller kontakta oss så hjälper vi dig.
-          </p>
-          <p>
-            För information om priser – <a class="text-link" href={`${BASE_URL}kontakt/`}>kontakta oss.</a>
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 </SiteLayout>

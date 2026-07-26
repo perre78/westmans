@@ -19,6 +19,11 @@ const BASE_URL = import.meta.env.BASE_URL;
             och specialverktyg kan vi hjälpa till med både vanliga och mer
             avancerade arbeten.
           </p>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="tel:061233018">Ring verkstaden</a>
+            <a class="btn btn-secondary" href={`${BASE_URL}kontakt/`}>Kontakt och bokning</a>
+          </div>
         </div>
       </div>
     </section>
@@ -34,13 +39,9 @@ const BASE_URL = import.meta.env.BASE_URL;
           <div class="experience-copy">
             <p>
               Bilverkstaden startades av Jan-Owe på 1970-talet och har lång
-              erfarenhet av service och reparationer.
-              Vi är specialiserade på Fiat personbilar samt husbilar och
-              transportbilar byggda på Fiat-chassi sedan snart 40 år.
-            </p>
-            <p>
-              Med hjälp av Bosch diagnos- och motortester kan vi även utföra
-              service på de flesta andra bilmärken.
+              erfarenhet av service och reparationer. Vi har arbetat med Fiat
+              personbilar, husbilar och transportbilar på Fiat-chassi i snart
+              40 år, men servar även de flesta andra bilmärken.
             </p>
 
             <aside class="card note">
@@ -68,88 +69,52 @@ const BASE_URL = import.meta.env.BASE_URL;
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">Våra tjänster</p>
+          <h2>Hjälp för bilen – från service till felsökning</h2>
+          <p>
+            Välj ett område för att läsa mer om vad vi kan hjälpa dig med.
+          </p>
         </div>
 
-        <div class="grid-two">
-          <article class="card">
-            <h3>Service</h3>
-            <p>
-              Vi utför servicearbeten på personbilar, transportbilar och
-              husbilar med hjälp av modern utrustning och lång erfarenhet.
-            </p>
-          </article>
+        <div class="details-stack">
+          <details class="info-details">
+            <summary>
+              <span class="details-title">Service och reparationer</span>
+              <span class="details-summary">Personbil, transportbil och husbil</span>
+            </summary>
+            <div class="details-body">
+              <p>
+                Vi utför löpande service och reparationer med modern utrustning,
+                lång erfarenhet och specialverktyg för flera bilmodeller.
+              </p>
+            </div>
+          </details>
 
-          <article class="card">
-            <h3>Felsökning</h3>
-            <p>
-              Med våra diagnosverktyg kan vi felsöka både nya och äldre bilar
-              och snabbare hitta orsaken till problemet.
-            </p>
-          </article>
+          <details class="info-details">
+            <summary>
+              <span class="details-title">Felsökning och diagnostik</span>
+              <span class="details-summary">För både nya och äldre bilar</span>
+            </summary>
+            <div class="details-body">
+              <p>
+                Bosch diagnos- och motortester hjälper oss att hitta orsaken
+                snabbare och kontrollera många olika bilmärken.
+              </p>
+            </div>
+          </details>
 
-          <article class="card">
-            <h3>4-hjulsinställning</h3>
-            <p>
-              Med vår moderna 4-hjulsinställare ställer vi in korrekta
-              hjulvinklar. Vi klarar även bilar med låg spoiler.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Komplett kontroll</h3>
-            <p>
-              Vi har bromsprovare och avgasmätare för att kunna utföra en mer
-              komplett service och kontroll av bilen.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Specialverktyg</h3>
-            <p>
-              Vi har specialverktyg för bland annat byte av kompaktlager till
-              flera olika bilmodeller.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Motor- och diagnostest</h3>
-            <p>
-              Bosch diagnos- och motortester gör det möjligt för oss att utföra
-              service och tester på många olika bilmärken.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Kontroller</p>
-          <h2>Utrustning för noggrann kontroll</h2>
-        </div>
-
-        <div class="content-split">
-          <div>
-            <p>
-              För att kunna göra ett noggrant arbete använder vi modern
-              verkstadsutrustning som hjälper oss att kontrollera bilens skick
-              och justera den på rätt sätt.
-              Det gör att vi kan erbjuda både felsökning, kontroll och åtgärder
-              med bättre precision.
-            </p>
-          </div>
-
-          <aside class="card note">
-            <h3>Vi har bland annat</h3>
-            <ul>
-              <li>Diagnosverktyg för nya och äldre bilar</li>
-              <li>4-hjulsinställare</li>
-              <li>Bromsprovare</li>
-              <li>Avgasmätare</li>
-              <li>Specialverktyg för utvalda bilmodeller</li>
-            </ul>
-          </aside>
+          <details class="info-details">
+            <summary>
+              <span class="details-title">Hjulinställning och kontroll</span>
+              <span class="details-summary">Hjulvinklar, bromsar och avgaser</span>
+            </summary>
+            <div class="details-body">
+              <ul class="plain-list">
+                <li>4-hjulsinställning, även för bilar med låg spoiler</li>
+                <li>Bromsprovare och avgasmätare</li>
+                <li>Diagnosverktyg och specialverktyg</li>
+              </ul>
+            </div>
+          </details>
         </div>
       </div>
     </section>

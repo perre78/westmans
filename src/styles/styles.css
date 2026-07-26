@@ -204,32 +204,21 @@ a:hover {
 }
 
 @media (min-width: 701px) {
-  .nav,
-  .logo-row,
-  .logo img,
-  .header-tires {
-    transition:
-      width 0.2s ease,
-      gap 0.2s ease,
-      padding 0.2s ease,
-      grid-template-columns 0.2s ease;
-  }
-
-  .site-header.is-compact .nav {
+  .nav {
     gap: 0.45rem;
     padding: 0.45rem 0;
   }
 
-  .site-header.is-compact .logo-row {
+  .logo-row {
     grid-template-columns: 96px minmax(220px, 280px) 96px;
     gap: 1rem;
   }
 
-  .site-header.is-compact .logo img {
+  .logo img {
     width: min(100%, 280px);
   }
 
-  .site-header.is-compact .header-tires {
+  .header-tires {
     width: 88px;
   }
 }
@@ -252,15 +241,6 @@ a:hover {
   margin: 5px 0;
   border-radius: 999px;
   background: #222;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .nav,
-  .logo-row,
-  .logo img,
-  .header-tires {
-    transition: none;
-  }
 }
 
 /* MENYLÄNKAR */
@@ -711,7 +691,7 @@ a:hover {
 
 /* FOOTER */
 .site-footer {
-  padding: 1rem 0 1.5rem;
+  padding: 0.65rem 0 0.85rem;
   background: #ffffff;
   color: #222;
   border-radius: 0 0 12px 12px;
@@ -719,7 +699,7 @@ a:hover {
 
 .footer-inner {
   border-top: 1px solid #ddd;
-  padding-top: 0.75rem;
+  padding-top: 0.55rem;
 }
 
 .footer-row {
@@ -727,19 +707,19 @@ a:hover {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 0.5rem;
+  gap: 0.35rem;
 }
 
 .footer-logos {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 24px;
   width: 100%;
 }
 
 .footer-logos img {
-  height: 100px;
+  height: 88px;
   width: auto;
   object-fit: contain;
 }
@@ -882,12 +862,12 @@ a:hover {
   }
 
   .footer-logos {
-    gap: 16px;
+    gap: 12px;
     flex-wrap: wrap;
   }
 
   .footer-logos img {
-    height: 72px;
+    height: 64px;
   }
 
   .contact-row {

@@ -8,7 +8,7 @@ const BASE_URL = import.meta.env.BASE_URL;
   description="Däck, fälgar, batterier och reservdelar från Westmans Serviceverkstad"
 >
   <main>
-    <section class="hero hero-small">
+    <section class="hero hero-small hero-white">
       <div class="container">
         <p class="eyebrow">Däck, batterier och reservdelar</p>
         <h1>Bildelar och tillbehör</h1>
@@ -24,66 +24,57 @@ const BASE_URL = import.meta.env.BASE_URL;
       </div>
     </section>
 
-    <section class="section">
+    <section class="section alt">
       <div class="container">
         <div class="section-heading">
-          <h2>Däck och fälgar</h2>
+          <h2 class="eyebrow eyebrow-heading">Däck och fälgar</h2>
           <p>
             Vi har alternativ i flera prisklasser och hjälper dig välja rätt
             för bilen och budgeten.
           </p>
         </div>
 
-        <div class="tires-layout">
-          <div class="tires-copy details-stack">
-            <details class="info-details">
-              <summary>
-                <span class="details-title">Däck</span>
-                <span class="details-summary">Flera välkända tillverkare</span>
-              </summary>
-              <div class="details-body">
-                <p>Vi erbjuder bland annat:</p>
-                <ul class="plain-list compact-list">
-                  <li>Michelin</li>
-                  <li>Goodyear</li>
-                  <li>Pirelli</li>
-                  <li>Continental</li>
-                  <li>Bridgestone</li>
-                  <li>Firestone</li>
-                  <li>Nokian</li>
-                  <li>Kumho</li>
-                </ul>
-              </div>
-            </details>
+        <div class="tires-copy details-stack">
+          <details class="info-details">
+            <summary>
+              <span class="details-title">Däck</span>
+              <span class="details-summary">Flera välkända tillverkare</span>
+            </summary>
+            <div class="details-body">
+              <p>Vi erbjuder bland annat:</p>
+              <ul class="plain-list compact-list">
+                <li>Michelin</li>
+                <li>Goodyear</li>
+                <li>Pirelli</li>
+                <li>Continental</li>
+                <li>Bridgestone</li>
+                <li>Firestone</li>
+                <li>Nokian</li>
+                <li>Kumho</li>
+              </ul>
+            </div>
+          </details>
 
-            <details class="info-details">
-              <summary>
-                <span class="details-title">Stål- och alufälgar</span>
-                <span class="details-summary">Beställning och hjälp att välja</span>
-              </summary>
-              <div class="details-body">
-                <p>
-                  Fälgar finns för beställning. Är du osäker på vad som passar
-                  din bil hjälper vi dig att hitta rätt.
-                </p>
-              </div>
-            </details>
-          </div>
-
-          <figure class="tires-image">
-            <img
-              src={`${BASE_URL}img/dack-falgar-cartoon.png`}
-              alt="Tecknad bild av däck och fälgar"
-            />
-          </figure>
+          <details class="info-details">
+            <summary>
+              <span class="details-title">Stål- och alufälgar</span>
+              <span class="details-summary">Beställning och hjälp att välja</span>
+            </summary>
+            <div class="details-body">
+              <p>
+                Fälgar finns för beställning. Är du osäker på vad som passar
+                din bil hjälper vi dig att hitta rätt.
+              </p>
+            </div>
+          </details>
         </div>
       </div>
     </section>
 
-    <section class="section alt">
+    <section class="section section-soft-cards">
       <div class="container">
         <div class="section-heading">
-          <h2>Batterier</h2>
+          <h2 class="eyebrow eyebrow-heading">Batterier</h2>
           <p>Startbatterier med hög effekt och driftsäkerhet.</p>
         </div>
 
@@ -105,7 +96,7 @@ const BASE_URL = import.meta.env.BASE_URL;
       </div>
     </section>
 
-    <section class="section">
+    <section class="section alt">
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">För Kramforsbor</p>

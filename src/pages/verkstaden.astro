@@ -8,8 +8,8 @@ const BASE_URL = import.meta.env.BASE_URL;
   description="Service, felsökning, hjulinställning och verkstadsarbeten för personbilar, transportbilar och husbilar."
 >
   <main>
-    <section class="hero">
-      <div class="container hero-grid">
+    <section class="hero hero-white">
+      <div class="container hero-grid workshop-hero-grid">
         <div>
           <p class="eyebrow">Verkstaden</p>
           <h1>Service och verkstadstjänster för både vanliga och större fordon</h1>
@@ -25,47 +25,45 @@ const BASE_URL = import.meta.env.BASE_URL;
             <a class="btn btn-secondary" href={`${BASE_URL}kontakt/`}>Kontakt och bokning</a>
           </div>
         </div>
+
+        <figure class="workshop-hero-image">
+          <img
+            src={`${BASE_URL}img/ring-mig-bilfel-transparent.png`}
+            alt="Ring mig vid bilfel, reparation av alla bilmärken"
+          />
+        </figure>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section alt">
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">Erfarenhet</p>
           <h2>En verkstad med lång erfarenhet</h2>
         </div>
 
-        <div class="experience-layout">
-          <div class="experience-copy">
-            <p>
-              Bilverkstaden startades av Jan-Owe på 1970-talet och har lång
-              erfarenhet av service och reparationer. Vi har arbetat med Fiat
-              personbilar, husbilar och transportbilar på Fiat-chassi i snart
-              40 år, men servar även de flesta andra bilmärken.
-            </p>
+        <div class="experience-copy">
+          <p>
+            Bilverkstaden startades av Jan-Owe på 1970-talet och har lång
+            erfarenhet av service och reparationer. Vi har arbetat med Fiat
+            personbilar, husbilar och transportbilar på Fiat-chassi i snart
+            40 år, men servar även de flesta andra bilmärken.
+          </p>
 
-            <aside class="card note">
-              <h3>Specialisering</h3>
-              <ul>
-                <li>Fiat personbilar</li>
-                <li>Husbilar på Fiat-chassi</li>
-                <li>Transportbilar på Fiat-chassi</li>
-                <li>Service på flera bilmärken</li>
-              </ul>
-            </aside>
-          </div>
-
-          <figure class="experience-image">
-            <img
-              src={`${BASE_URL}img/ring-mig-bilfel.png`}
-              alt="Ring mig vid bilfel, reparation av alla bilmärken"
-            />
-          </figure>
+          <aside class="card note">
+            <h3>Specialisering</h3>
+            <ul>
+              <li>Fiat personbilar</li>
+              <li>Husbilar på Fiat-chassi</li>
+              <li>Transportbilar på Fiat-chassi</li>
+              <li>Service på flera bilmärken</li>
+            </ul>
+          </aside>
         </div>
       </div>
     </section>
 
-    <section class="section alt">
+    <section class="section section-soft-cards">
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">Våra tjänster</p>

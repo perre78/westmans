@@ -93,6 +93,10 @@ strong {
   text-transform: none;
 }
 
+.eyebrow-heading {
+  line-height: 1.6;
+}
+
 .lead {
   max-width: 62ch;
   font-size: 1.08rem;
@@ -329,10 +333,32 @@ a:hover {
   padding-bottom: 0.75rem;
 }
 
+.hero.hero-white {
+  background: #ffffff;
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+}
+
+.workshop-hero-grid {
+  grid-template-columns: minmax(0, 1fr) 185px;
+  align-items: center;
+}
+
+.workshop-hero-image {
+  width: 100%;
+  max-width: 185px;
+  margin: 0;
+  justify-self: end;
+}
+
+.workshop-hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .cta-row {
@@ -353,6 +379,10 @@ a:hover {
 
 .hero-points li {
   display: inline-flex;
+}
+
+.hero-points a {
+  display: inline-flex;
   align-items: center;
   min-height: 36px;
   padding: 0.42rem 0.78rem;
@@ -366,7 +396,30 @@ a:hover {
   letter-spacing: 0.08em;
   line-height: 1.1;
   text-transform: uppercase;
+  text-decoration: none;
   box-shadow: 0 1px 0 rgba(79, 54, 37, 0.08);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.hero-points a:visited {
+  color: #2b2622;
+}
+
+.hero-points a:hover {
+  background: #e4edf5;
+  border-color: var(--brand-light);
+  color: var(--brand-dark);
+  text-decoration: none;
+}
+
+.hero-points a:focus-visible {
+  background: #e4edf5;
+  color: var(--brand-dark);
+  outline: 3px solid var(--brand-light);
+  outline-offset: 3px;
 }
 
 /* BUTTONS */
@@ -404,12 +457,25 @@ a:hover {
   border-bottom: 1px solid var(--line-soft);
 }
 
+.section-soft-cards .card,
+.section-soft-cards .info-details {
+  background: rgba(226, 214, 198, 0.48);
+}
+
+.section-soft-cards .contact-card-white {
+  background: rgba(226, 214, 198, 0.23);
+}
+
 .home-hero + #verkstaden.alt {
   background: var(--section-tint);
 }
 
 #kontakt {
   background: var(--section-tint);
+}
+
+#kontakt.section-white {
+  background: #ffffff;
 }
 
 #kontakt .section-heading .lead {
@@ -505,13 +571,6 @@ a:hover {
   align-items: start;
 }
 
-.tires-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(180px, 0.28fr);
-  gap: 1.5rem;
-  align-items: start;
-}
-
 .tires-copy {
   display: grid;
   gap: 1rem;
@@ -526,44 +585,12 @@ a:hover {
   margin-top: 1.35rem;
 }
 
-.tires-image {
-  margin: 0;
-  justify-self: end;
-  max-width: 210px;
-}
-
-.tires-image img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.experience-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(220px, 0.75fr);
-  gap: 1.75rem;
-  align-items: start;
-}
-
 .experience-copy {
   max-width: 680px;
 }
 
 .experience-copy .note {
   margin-top: 1.4rem;
-}
-
-.experience-image {
-  margin: 0;
-  align-self: end;
-  justify-self: end;
-  max-width: 240px;
-}
-
-.experience-image img {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 .contact-box {
@@ -742,18 +769,16 @@ a:hover {
   .home-hero-grid,
   .grid-two,
   .content-split,
-  .tires-layout,
-  .experience-layout,
   .contact-box {
     grid-template-columns: 1fr;
   }
 
-  .tires-image {
-    justify-self: center;
-    max-width: min(100%, 260px);
+  .workshop-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
-  .experience-image {
+  .workshop-hero-image {
     display: none;
   }
 
